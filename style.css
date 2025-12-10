@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background-image:radial-gradient(black,black,black,blue);
+ 
+  color: #ffffff;
+}
+
+/* Main section */
+.about-section {
+  padding: 60px 20px;
+  animation: fadePage 1s ease-in;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  animation: slideDown 1s forwards;
+}
+
+/* Subtitle */
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #fbfafa;
+  animation: fadeIn 2s forwards;
+}
+
+/* Cards container */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual card */
+.card {
+  background: #fbfafa;
+  background-image:linear-gradient(to right,blue,purple);
+
+  padding: 25px;
+  border-radius: 18px;
+  width: 260px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* --- Animations --- */
+
+/* Fade in */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide up */
+.slide-up {
+  opacity: 0;
+  animation: slideUp 1.2s forwards;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Scale in */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleIn 1.2s forwards;
+}
+
+@keyframes scaleIn {
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Page fade */
+@keyframes fadePage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Title slide */
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* -------- Founders Section -------- */
+
+.founders-section {
+  margin-top: 60px;
+  text-align: center;
+  animation: fadePage 1s ease;
+}
+
+.founders-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Flex container */
+.founders-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Individual card */
+.founder-card {
+
+  background: #111111;
+  padding: 20px;
+  border-radius: 20px;
+  width: 260px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.founder-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Founder image */
+.founder-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Founder name */
+.founder-name {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fdf9f9;
+}
+
+/* Fade animation for cards */
+.founder-fade {
+  opacity: 0;
+  animation: fadeIn 1.3s forwards;
+}
