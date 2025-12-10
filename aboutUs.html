@@ -3,10 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+  <meta name="Author" content="BlueTech">
+  <meta name="Description" content="Learn more about BlueTech, our mission, Vision, Values, and Founders">
+  <meta name="Keyword" content="BlueTech, Website development, Technology, innovations, and Software development">
+  <title>BlueTech | About Us</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+    <div class="logo">BlueTech</div>
+    <!-- hamburger toggle (checkbox hack) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation">
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutUs.html">About Us</a>
+      <a href="contactUs">Contact Us</a>
+    </nav>
+
+    <!-- Place label after nav visually (we'll position it to the right via CSS) -->
+    <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </header>
 
 <section class="about-section">
   <div class="container">
@@ -52,7 +73,7 @@
     <!-- Founder 2 -->
     <div class="founder-card founder-fade">
       <img src="founder.png" alt="Founder 2" class="founder-img">
-      <h3 class="founder-name">Harvey Lusambo</h3>
+      <h3 class="founder-name">Lusambo M. Harvey</h3>
     </div>
 
   </div>
@@ -61,3 +82,4 @@
 
 </body>
 </html>
+
