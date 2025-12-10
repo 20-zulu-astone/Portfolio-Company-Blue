@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="BlueTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>BlueTech</title>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">BlueTech</div>
+    <!-- CSS-only hamburger toggle (checkbox hack) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation">
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <!-- Place label after nav visually (we'll position it to the right via CSS) -->
+    <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <!-- Animated Background for Hero -->
+    <div class="background">
+      <div class="shape circle" style="width:120px;height:120px;left:10%;animation-duration:30s;"></div>
+      <div class="shape box" style="width:80px;height:80px;left:40%;animation-duration:22s;"></div>
+      <div class="shape circle" style="width:60px;height:60px;left:70%;animation-duration:26s;"></div>
+      <div class="shape box" style="width:100px;height:100px;left:85%;animation-duration:35s;"></div>
+      
+    </div>
+
+    <div class="hero-content">
+      <h1>Blue Tech</h1>
+      <p>
+        Your idea. We build digital solutions.<br>
+        Creating digital visibility.
+      </p>
+      <div class="buttons">
+        <a href="about.html">Learn More</a>
+        <a href="contact.html">Let’s Talk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <p><i><strong>Don't just take our word for it — hear from our clients.</strong></i></p>
+
+    <!-- Testimonials Carousel -->
+    <div class="testimonial-carousel">
+
+
+      <!-- Carousel viewport -->
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-box">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  "Outstanding support and incredible product! The implementation was seamless and the results were immediate. Our customer satisfaction scores increased by 40% after engaging BlueTech."
+                </p>
+                <div class="client-info">
+                  <div class="client-avatar">
+                    <img src="images/lusambo-harvey.jpg" alt="Lusambo Harvey">
+                  </div>
+                  <div class="client-details">
+                    <h4>Lusambo Harvey</h4>
+                    <p>CEO, B&H Oxy-Fabrication</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-box">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  "BlueTech transformed our digital presence in ways we never imagined. Their team is professional, responsive, and truly invested in our success. We've seen a 60% increase in online engagement since partnering with them."
+                </p>
+                <div class="client-info">
+                  <div class="client-avatar">
+                    <img src="images/astone-zulu.jpg" alt="Astone Zulu">
+                  </div>
+                  <div class="client-details">
+                    <h4>Astone Zulu</h4>
+                    <p>Director, Digital Strategy</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation arrow -->
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 BlueTech. All rights reserved.
+  </footer>
+</body>
+</html>
