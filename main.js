@@ -6,3 +6,16 @@ window.addEventListener("scroll", function() {
     header.classList.remove("shrink");
   }
 });
+
+
+//click to expand search bar
+ const searchToggle = document.getElementById("search-toggle");
+const navSearch = document.getElementById("nav-search");
+const searchInput = document.getElementById("search-input");
+
+searchToggle.addEventListener("click", () => {
+  navSearch.classList.toggle("expanded");
+  if (navSearch.classList.contains("expanded")) {
+    searchInput.focus();
+  }
+});
