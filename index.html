@@ -8,31 +8,42 @@
   <meta name="description" content=" BlueTech builds modern digital solutions that enhance visibility and business growth.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="aboutUs.css">
   <title>BlueTech</title>
 
 </head>
 
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="logo">BlueTech</div>
-    <!-- CSS-only hamburger toggle (checkbox hack) -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation">
+<header class="center-header">
+  <div class="nav-container">
+    <!-- Left & Center: Logo + Links -->
+    <div class="nav-left-center">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a href="index.html">BlueTech</a>
+      </div>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="aboutUs.html">About</a>
-      <a href="contactUs.html">Contact</a>
-    </nav>
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html" class="active">About Us</a>
+        <a href="services.html">Services</a>
+      </nav>
+    </div>
 
-    <!-- Place label after nav visually (we'll position it to the right via CSS) -->
-    <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-  </header>
+    <!-- Right: Search + Contact -->
+    <div class="nav-right">
+      <div class="nav-search">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+      </div>
+      <a href="contactUs.html" class="contact-btn">Contact</a>
+    </div>
+
+  </div>
+</header>
+
 
   <!-- Hero -->
   <section class="hero">
@@ -141,5 +152,6 @@
   <footer>
     © 2026 BlueTech. All rights reserved.
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>

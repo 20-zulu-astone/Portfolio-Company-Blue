@@ -3,83 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="Author" content="BlueTech">
-  <meta name="Description" content="Learn more about BlueTech, our mission, Vision, Values, and Founders">
-  <meta name="Keyword" content="BlueTech, Website development, Technology, innovations, and Software development">
+  <meta name="author" content="BlueTech">
+  <meta name="description" content="Learn more about BlueTech, our mission, vision, values, and founders">
+  <meta name="keywords" content="BlueTech, Website development, Technology, innovations, Software development">
+
   <title>BlueTech | About Us</title>
-  <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="aboutUs.css">
+   <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
-    <header>
-    <div class="logo">BlueTech</div>
-    <!-- hamburger toggle (checkbox hack) -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation">
+ <header class="center-header">
+  <div class="nav-container">
+    <!-- Left & Center: Logo + Links -->
+    <div class="nav-left-center">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a href="index.html">BlueTech</a>
+      </div>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="aboutUs.html">About Us</a>
-      <a href="contactUs">Contact Us</a>
-    </nav>
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html" class="active">About Us</a>
+        <a href="services.html">Services</a>
+      </nav>
+    </div>
 
-    <!-- Place label after nav visually (we'll position it to the right via CSS) -->
-    <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-  </header>
+    <!-- Right: Search + Contact -->
+    <div class="nav-right">
+      <div class="nav-search">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+      </div>
+      <a href="contactUs.html" class="contact-btn">Contact</a>
+    </div>
 
-<section class="about-section">
-  <div class="container">
+  </div>
+</header>
 
-    <h1 class="title">About Us</h1>
 
-    <p class="subtitle">
-      We are a team dedicated to building creative solutions that empower individuals and businesses.
-    </p>
 
-    <div class="cards">
+  <!-- ================= HERO / INTRO SECTION ================= -->
+  <section class="about-section">
+    <div class="container">
+      <h1 class="title">BlueTech</h1>
+
+      <p class="subtitle">
+        BlueTech is a future-focused technology company dedicated to building innovative solutions
+        that empower individuals, businesses, and communities across the globe.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= MISSION / VISION / VALUES ================= -->
+  <section class="mv-section">
+    <div class="container cards">
 
       <div class="card fade-in">
         <h2>Our Mission</h2>
-        <p>To transform ideas into meaningful digital products.</p>
+        <p>
+          To transform ideas into powerful digital products that make life simpler, smarter, and more connected.
+        </p>
       </div>
 
       <div class="card slide-up">
         <h2>Our Vision</h2>
-        <p>To inspire innovation and creativity across the globe.</p>
+        <p>
+          To become a global leader in innovative technology solutions while inspiring creativity and innovation.
+        </p>
       </div>
 
       <div class="card scale-in">
         <h2>Our Values</h2>
-        <p>Integrity, creativity, and commitment to quality.</p>
+        <p>
+          Innovation, transparency, integrity, and a commitment to delivering world-class solutions.
+        </p>
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
-<section class="founders-section">
-  <h2 class="founders-title">Our Founders</h2>
+  <!-- ================= FOUNDERS SECTION ================= -->
+  <section class="founders-section" class="founder-background">
+    <h2 class="founders-title">Meet Our Founders</h2>
 
-  <div class="founders-container">
+    <div class="founders-container">
 
-    <!-- Founder 1 -->
-    <div class="founder-card founder-fade">
-      <img src="founder.png" alt="Founder 1" class="founder-img">
-      <h3 class="founder-name">Astone Zulu</h3>
+      <!-- Founder 1 -->
+      <div class="founder-card founder-fade">
+        <img src="images/AstoneFounder1.png" alt="Founder 1" class="founder-img">
+        <h3 class="founder-name">Astone Zulu <a href="https://www.linkedin.com/in/zuluastone" target="_blank" class="linkedin-link">
+    <img src="images/linkedin-image.png" alt="LinkedIn" class="linkedin-icon">
+  </a></h3>
+        <p class="founder-role">
+  Co-Founder & Technical Lead
+</p>
+
+        <p class="founder-quote">"You don't have to be great to start, but start to be great" - Zig Ziglar</p>
+        
+      </div>
+
+      <!-- Founder 2 -->
+      <div class="founder-card founder-fade">
+        <img src="images/HarveyFounder2.jpg" alt="Founder 2" class="founder-img">
+        <h3 class="founder-name">Lusambo M. Harvey  <a href="https://www.linkedin.com/in/lusambo-harvey-11849a327/" target="_blank" class="linkedin-link">
+    <img src="images/linkedin-image.png" alt="LinkedIn" class="linkedin-icon">
+  </a></h3>
+       
+       <p class="founder-role">
+  Co-Founder & Operations Lead
+</p>
+
+        <p class="founder-quote">"You're 100% responsible what happens to you in life" - Unknown</p>
+        
+      </div>
+
     </div>
+  </section>
 
-    <!-- Founder 2 -->
-    <div class="founder-card founder-fade">
-      <img src="founder.png" alt="Founder 2" class="founder-img">
-      <h3 class="founder-name">Lusambo M. Harvey</h3>
-    </div>
-
-  </div>
-</section>
-
-
+  <!-- ================= FOOTER ================= -->
+  <footer>
+      <p>© 2026 BlueTech. All rights reserved.</p>
+  </footer>
+<script src="main.js"></script>
 </body>
 </html>
-

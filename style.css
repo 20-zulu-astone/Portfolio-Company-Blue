@@ -500,7 +500,7 @@
 body {
   margin: 0;
   font-family: "Inter", system-ui, sans-serif;
-  background-image:radial-gradient(black,black,black,blue);
+  background-image:linear-gradient(to bottom,rgba(99, 10, 231, 0),rgb(8, 6, 6));
  
   color: #ffffff;
 }
@@ -622,7 +622,7 @@ body {
 /* Individual card */
 .founder-card {
 
-  background: #111111;
+  background: #fdfcfc;
   padding: 20px;
   border-radius: 20px;
   width: 260px;
@@ -638,17 +638,22 @@ body {
 /* Founder image */
 .founder-img {
   width: 100%;
-  height: 260px;
+  height: 265px;
   object-fit: cover;
   border-radius: 16px;
 }
 
 /* Founder name */
-.founder-name {
+/*.founder-name {
   margin-top: 15px;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #fdf9f9;
+  color: #060606;
+}*/
+.founder-quote{
+  font-size: 1.0rem;
+  font-weight: 200;
+  color:#111111;
 }
 
 /* Fade animation for cards */
