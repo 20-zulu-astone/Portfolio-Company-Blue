@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="BlueTech">
+  <title>BlueTech | Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-us">
+      <header>
+    <div class="logo">BlueTech</div>
+    <!-- hamburger toggle (checkbox hack) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation">
 
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutUs.html">About Us</a>
+      <a href="contactUs.html">Contact Us</a>
+    </nav>
+
+    <!-- Place label after nav visually (we'll position it to the right via CSS) -->
+    <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </header>
+  
+  <!--FORM-->
+  <section class="contact-section">
+    <div class="contact-info">
+      <h1>You start us off.<br>We take it from there.</h1>
+      <p>One of our leaders or founders will be your direct point of contact.</p>
+    </div>
+
+    <form class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="source">How did you hear of us?</label>
+      <input type="text" id="source" placeholder="Enter your answer">
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Enter your message here..."></textarea>
+
+      <button type="submit">Send!</button>
+      <button type="reset">Reset  </button>
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 BlueTech. All rights reserved.
+  </footer>
+
+</body>
+</html>
