@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astone Zulu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a1628;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: #0d1b2a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff8c42;
+        }
+        .logo a{
+            color: #ff8c42;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff8c42;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #ffffff;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5rem 5%;
+            gap: 3rem;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ff8c42;
+        }
+
+        .hero-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #b8b8b8;
+        }
+        .hero-content p{
+            font-size: xx-large;
+            text-indent: 10%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: 2px solid #ff8c42;
+            background-color: transparent;
+            color: #ffffff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-project {
+            padding: 0.8rem 2rem;
+            border: 2px solid #ff8c42;
+            background-color: transparent;
+            color: #ffffff;
+            font-size: 1rem;
+            background-color: #ff8c42;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #ff8c42;
+            color: #0a1628;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ff8c42;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem 5%;
+            background-color: #0d1b2a;
+            flex-wrap: wrap;
+        }
+
+        .tech-item {
+            padding: 1rem 2rem;
+            background-color: #1a2942;
+            border-radius: 30px;
+            /* border: 2px solid #ff8c42; */
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 5%;
+        }
+
+        .about-deco{
+            color: #ffffff;
+        }
+
+        .about h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #ff8c42;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-services {
+            flex: 1;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #0d1b2a;
+            border-left: 4px solid #ff8c42;
+        }
+
+        .service-icon {
+            font-size: 2rem;
+        }
+
+        .about-text {
+            flex: 1;
+            padding: 2rem;
+            background-color: #0d1b2a;
+            border-radius: 10px;
+        }
+
+        .about-text p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: #ff8c42;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #b8b8b8;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 5rem 5%;
+            background-color: #0d1b2a;
+        }
+
+        .projects h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #ff8c42;
+        }
+
+        .project-item {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            align-items: center;
+        }
+
+        .project-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .project-image {
+            flex: 1;
+            
+        }
+
+        .project-image img {
+            width: 80%;
+            height: auto;
+            border: 3px solid #ff8c42;
+            
+        }
+
+        .project-info {
+            flex: 1;
+        }
+
+        .project-info h3 {
+            font-size: 2rem;
+            color: #ff8c42;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            padding: 0.3rem 1rem;
+            background-color: #1a2942;
+           /* border: 1px solid #ff8c42; */
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+
+        .project-info p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 5%;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #ff8c42;
+        }
+
+        .contact-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #0d1b2a;
+            border: 2px solid #1a2942;
+            color: #ffffff;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff8c42;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d1b2a;
+            padding: 2rem 5%;
+            text-align: center;
+        }
+        .footer-image{
+            width: 50px;
+            object-fit: cover;
+            border-radius: 40px;
+
+        }
+        .footer img{
+            border-radius: 40px;
+            object-fit: cover;
+            margin: auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ff8c42;
+        }
+
+        footer p {
+            color: #b8b8b8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background-color: #0d1b2a;
+                width: 100%;
+                padding: 2rem;
+                transition: left 0.3s;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .project-item,
+            .project-item.reverse {
+                flex-direction: column;
+            }
+
+            .contact-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo"><a href="#home">Astone Zulu</a></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1><span class="about-deco">Hello</span>.</h1>
+            
+            <p>I'm Astone</p>
+            <h2>Software Developer</h2>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-project">Got a Project?</a>
+                <a href="#" class="btn" download="#">Resume</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/founder.png" alt="Astone">
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <div class="tech-stack">
+        <div class="tech-item">Python</div>
+        <div class="tech-item">Django</div>
+        <div class="tech-item">HTML</div>
+        <div class="tech-item">CSS</div>
+        <div class="tech-item">JavaScript</div>
+        <div class="tech-item">Blogging</div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-services">
+                <div class="service-item">
+                    <div class="service-icon">💻</div>
+                    <div>
+                        <h4>Web Development</h4>
+                        <p>Building responsive and dynamic websites</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">✍️</div>
+                    <div>
+                        <h4>Blogging</h4>
+                        <p>Sharing knowledge and experiences</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🌐</div>
+                    <div>
+                        <h4>Web Hosting</h4>
+                        <p>Deploying and managing web applications</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text">
+                <p>I'm a passionate full-stack developer specializing in Python and Django. I love creating elegant solutions to complex problems and building applications that make a difference.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="about-deco">15</span>+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="about-deco">2</span>+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="about-deco">2</span>+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+        
+        <div class="project-item">
+            <div class="project-image">
+                <img src="#" alt="AstoneCorner Blog">
+            </div>
+            <div class="project-info">
+                <h3>AstoneCorner Blog</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">BLOGGINg</span>
+                    <span class="tech-tag">WRITING</span>
+                </div>
+                <p>A full tech blog.</p>
+                <div class="project-buttons">
+                    <a href="https://www.astonecorner.com" class="btn">View Blog</a>
+                    <a href="https://www.astonecorner.com" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item reverse">
+            <div class="project-image">
+                <img src="https://via.placeholder.com/600x400" alt="Blog Management System">
+            </div>
+            <div class="project-info">
+                <h3>Blog Management System</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                </div>
+                <p>A content management system for bloggers featuring markdown support, categories, tags, comments, and a responsive design. Includes an admin dashboard for managing posts and user interactions.</p>
+                <div class="project-buttons">
+                    <a href="#" class="btn">View GitHub</a>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-image">
+                <img src="https://via.placeholder.com/600x400" alt="Task Tracker">
+            </div>
+            <div class="project-info">
+                <h3>Task Tracker Application</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Bootstrap</span>
+                </div>
+                <p>A productivity application for tracking tasks and projects with features like deadlines, priorities, status updates, and team collaboration. Real-time updates and intuitive user interface.</p>
+                <div class="project-buttons">
+                    <a href="#" class="btn">View GitHub</a>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden projects - shown when "See More" is clicked -->
+        <div id="moreProjects" style="display: none;">
+            <div class="project-item reverse">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="Weather App">
+                </div>
+                <div class="project-info">
+                    <h3>Weather Dashboard</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <p>A real-time weather application that fetches data from weather APIs and displays current conditions, forecasts, and historical data with beautiful visualizations.</p>
+                    <div class="project-buttons">
+                        <a href="#" class="btn">View GitHub</a>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="Portfolio Generator">
+                </div>
+                <div class="project-info">
+                    <h3>Portfolio Generator</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                    <p>An automated portfolio website generator that allows users to create professional portfolios by simply filling out a form. Features customizable themes and export options.</p>
+                    <div class="project-buttons">
+                        <a href="#" class="btn">View GitHub</a>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item reverse">
+                <div class="project-image">
+                    <img src="images/founder.png" alt="Chat Application">
+                </div>
+                <div class="project-info">
+                    <h3>Real-time Chat App</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django Channels</span>
+                        <span class="tech-tag">WebSockets</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <p>A real-time messaging application with group chats, private messaging, file sharing, and online status indicators. Built with Django Channels for WebSocket support.</p>
+                    <div class="project-buttons">
+                        <a href="#" class="btn">View GitHub</a>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <button id="seeMoreBtn" class="btn">See More Projects</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-text">
+                <h3>Contact Me</h3>
+                <p>Have a project in mind? Let's work together to bring your ideas to life.</p>
+            </div>
+            <form class="contact-form" netlify>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#" title="GitHub" class="footer-image"><img src="images/icons/githubIcon.png" alt="GitHub" class="footer-image"></a>
+            <a href="https://www.linkedin.com/in/zuluastone" title="LinkedIn" class="footer-image"><img src="images/icons/linkedInIcon.png" alt="LinkedIn" class="footer-image"></a>
+            <a href="https://x.com/ZuluAstone67563" title="Twitter"><img src="#" alt="X" class="foooter-image"></a>
+            <a href="#" title="Email" class="footer-image"><img src="images/icons/emailIcon.png" alt="Email" class="footer-image"></a>
+        </div>
+        <p> Created with Tenacity &copy; 2026 All Rights Reserved for Astone</p>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.backgroundColor = '#0d1b2aee';
+            } else {
+                nav.style.backgroundColor = '#0d1b2a';
+            }
+        });
+
+        // See More Projects Button
+        const seeMoreBtn = document.getElementById('seeMoreBtn');
+        const moreProjects = document.getElementById('moreProjects');
+        let projectsExpanded = false;
+
+        seeMoreBtn.addEventListener('click', () => {
+            if (!projectsExpanded) {
+                moreProjects.style.display = 'block';
+                seeMoreBtn.textContent = 'Show Less';
+                projectsExpanded = true;
+                
+                // Smooth scroll to the new projects
+                setTimeout(() => {
+                    moreProjects.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            } else {
+                moreProjects.style.display = 'none';
+                seeMoreBtn.textContent = 'See More Projects';
+                projectsExpanded = false;
+                
+                // Scroll back to projects section
+                document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+</body>
+</html>
